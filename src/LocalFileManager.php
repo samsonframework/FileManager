@@ -11,7 +11,7 @@ use samsonframework\filemanager\FileManagerInterface;
  * File system management class.
  * @package samsonphp\resource
  */
-class FileManager implements FileManagerInterface
+class LocalFileManager implements FileManagerInterface
 {
     /**
      * Wrapper for reading file.

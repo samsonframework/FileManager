@@ -6,9 +6,9 @@
 namespace samsonphp\less\tests;
 
 use PHPUnit\Framework\TestCase;
-use samsonphp\resource\FileManager;
+use samsonframework\localfilemanager\LocalFileManager;
 
-class FileManagerTest extends TestCase
+class LocalFileManagerTest extends TestCase
 {
     /** @var FileManager */
     protected $manager;
@@ -17,7 +17,7 @@ class FileManagerTest extends TestCase
 
     public function setUp()
     {
-        $this->manager = new FileManager();
+        $this->manager = new LocalFileManager();
     }
 
     public function testReadWriteMkDirWithRemove()
