@@ -1,0 +1,36 @@
+{
+  "name": "samsonframework/localfilemanager",
+  "description": "SamsonFramework local file system management package",
+  "keywords": [
+    "samsonframework",
+    "filesystem",
+    "local filesystem"
+  ],
+  "authors": [
+    {
+      "name": "Vitaly Iegorov",
+      "email": "egorov@samsonos.com"
+    }
+  ],
+  "require": {
+    "samsonframework/base": "1.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.*"
+  },
+  "license": "Open Software License (OSL) v 3.0",
+  "homepage": "http://samsonos.com/",
+  "autoload": {
+    "classmap": [
+      "src/"
+    ],
+    "psr-4": {
+      "samsonframework\\localfilemanager\\": "src/"
+    }
+  },
+  "config": {
+    "github-protocols": [
+      "https"
+    ]
+  }
+}
