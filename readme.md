@@ -1,6 +1,6 @@
 # SamsonFramework local file system management package
  
-> [\samsonframework\filemanager\FilemanagerInterface](http://github.com/samsonframework/base/blob/master/src/filemanger/LocalFileManager.php) implementation for working with local file system. 
+> [\samsonframework\filemanager\FilemanagerInterface](https://github.com/samsonframework/base/blob/master/src/filemanager/FileManagerInterface.php) implementation for working with local file system. 
 
 [![Latest Stable Version](https://poser.pugx.org/samsonframework/localfilemanager/v/stable.svg)](https://packagist.org/packages/samsonframework/localfilemanager)
 [![Build Status](https://scrutinizer-ci.com/g/samsonframework/localfilemanager/badges/build.png?b=master)](https://scrutinizer-ci.com/g/samsonframework/localfilemanager/build-status/master)
