@@ -138,9 +138,9 @@ class LocalFileManager implements FileManagerInterface
         $files = [];
 
         // Generate exclusion conditions
-        $exclude = implode(' ', array_map(function ($value) {
-            return '-not -path ' . $value . ' ';
-        }, $excludeFolders));
+        $exclude = '\( ' . implode(' -o ', array_map(function ($value) {
+            return '-path ' . rtrim($value, DIRECTORY_SEPARATOR) . ' ';
+        }, $excludeFolders)) . ' \) -prune -o';
 
         // Generate filters
         $filters = implode('-o ', array_map(function ($value) use ($exclude) {
@@ -156,7 +156,8 @@ class LocalFileManager implements FileManagerInterface
         foreach ($paths as $path) {
             // Scan path excluding folder patterns
             $tempFiles = [];
-            exec('find ' . $path . ' ' . $filters . ' | sort ', $tempFiles);
+            $command = 'find ' . rtrim($path, DIRECTORY_SEPARATOR) . ' ' . $exclude . ' ' . $filters . ' -print | sort ';
+            exec($command, $tempFiles);
 
             $files = array_merge($files, $tempFiles);
         }
