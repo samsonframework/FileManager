@@ -1,7 +1,3 @@
-.idea*
-vendor/*
-upload/*
-www/cache/*
-www/upload/*
-composer.lock
+.idea
+vendor
 composer.phar
